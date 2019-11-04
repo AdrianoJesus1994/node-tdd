@@ -6,7 +6,6 @@ module.exports = {
     host: "127.0.0.1",
     port: "5432",
     dialect: "postgres",
-    operatorsAliases: false,
     logging: false,
     define: {
       timestamps: true,
@@ -21,7 +20,6 @@ module.exports = {
     host: "127.0.0.1",
     port: "5432",
     dialect: "postgres",
-    operatorsAliases: false,
     logging: false,
     define: {
       timestamps: true,
@@ -36,7 +34,6 @@ module.exports = {
     host: "127.0.0.1",
     port: "5432",
     dialect: "postgres",
-    operatorsAliases: false,
     logging: false,
     define: {
       timestamps: true,
