@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js --ignore __teste__",
-    "test": "cross-env NODE_ENV=test jest"
+    "pretest": "npx cross-env NODE_ENV=test sequelize db:migrate",
+    "test": "cross-env NODE_ENV=test jest || echo 'error'",
+    "posttest": "npx cross-env NODE_ENV=test sequelize db:migrate:undo:all"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "cross-env": "^6.0.3",
     "jest": "^24.9.0",
     "nodemon": "^1.19.4",
-    "sequelize-cli": "^5.5.1"
+    "sequelize-cli": "^5.5.1",
+    "sqlite3": "^4.1.0"
   }
 }

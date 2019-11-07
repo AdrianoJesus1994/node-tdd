@@ -5,9 +5,9 @@ module.exports = {
     return queryInterface.createTable("users", {
       id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        primaryKey: true,
         autoIncrement: true,
-        primaryKy: true
+        allowNull: false
       },
       name: {
         type: Sequelize.STRING,
@@ -18,20 +18,17 @@ module.exports = {
         unique: true,
         type: Sequelize.STRING
       },
-      passwordHash: {
-        field: "password_hash",
+      password_hash: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      createdAt: {
+      created_at: {
         type: Sequelize.DATE,
-        allowNull: false,
-        field: "created_at"
+        allowNull: false
       },
-      updatedAt: {
+      updated_at: {
         type: Sequelize.DATE,
-        allowNull: false,
-        field: "updated_at"
+        allowNull: false
       }
     });
   },
