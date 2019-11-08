@@ -9,14 +9,6 @@ describe("Authentication", () => {
   });
 
   it("should crete user when receive user data", async () => {
-    // const user = await User.create({
-    //   name: "Alessandro da Silva de Jesus",
-    //   email: "asjesus1999@gmail.com",
-    //   password_hash: "sdda4sdf4as4dfa54s46g2ag49a8494f4awdf"
-    // });
-
-    // console.log(user);
-
     return request(app)
       .post("/create-user")
       .send({
@@ -24,7 +16,7 @@ describe("Authentication", () => {
         email: "asjesus1999@gmail.com",
         password_hash: "sdda4sdf4as4dfa54s46g2ag49a8494f4awdf"
       })
-      .expect(200, {});
+      .expect(201);
 
     // expect(request.status).toBe(200);
   });
